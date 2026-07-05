@@ -30,7 +30,7 @@ func GetAgeWithIdentificationNumber(identificationNumber string) (string, error)
 	reg := regexp.MustCompile(`^[1-9]\d{5}(18|19|20)(\d{2})((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$`)
 	params := reg.FindStringSubmatch(identificationNumber)
 	if len(params) == 0 {
-		return "", errors.New("身份证有�?)
+		return "", errors.New("身份证有误")
 	}
 	birYear, _ := strconv.Atoi(params[1] + params[2])
 	birMonth, _ := strconv.Atoi(params[3])
@@ -43,17 +43,17 @@ func GetAgeWithIdentificationNumber(identificationNumber string) (string, error)
 
 func GetSexWithIdentificationNumber(identificationNumber string) (string, error) {
 	if len(identificationNumber) != 18 {
-		return "", errors.New("身份证有�?)
+		return "", errors.New("身份证有误")
 	}
 	sexStr := identificationNumber[16:17]
 	sexCode, err := strconv.Atoi(sexStr)
 	if err != nil {
-		return "", errors.New("身份证有�?)
+		return "", errors.New("身份证有误")
 	}
 	if sexCode%2 == 0 {
-		return "�?, nil
+		return "女", nil
 	} else {
-		return "�?, nil
+		return "男", nil
 	}
 }
 func Difference(a, b []string) []string {
@@ -77,7 +77,8 @@ func ArrayConvertToString(array interface{}) string {
 	return strings.Replace(strings.Trim(fmt.Sprint(array), "[]"), " ", ",", -1)
 }
 
-// 随机生成32的密�?func SignKey() string {
+// 随机生成32的密钥
+func SignKey() string {
 	var b = make([]byte, 20)
 	rand.Read(b)
 	mb := md5.Sum(b)
@@ -95,7 +96,8 @@ func SerialNumber() string {
 
 const alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-"
 
-// Nonce 生成指定长度位的随机�?func Nonce(n int) string {
+// Nonce 生成指定长度位的随机数
+func Nonce(n int) string {
 	var bytes = make([]byte, n)
 	rand.Read(bytes)
 	for i, b := range bytes {
