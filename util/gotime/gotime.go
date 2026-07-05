@@ -12,8 +12,8 @@ package gotime
 import (
 	"context"
 	"fmt"
-	"github.com/sssbook/go-util/util/gotime/intlog"
-	"github.com/sssbook/go-util/util/gotime/utils"
+	"github.com/rq-cc/go-util/util/gotime/intlog"
+	"github.com/rq-cc/go-util/util/gotime/utils"
 	"os"
 	"regexp"
 	"strconv"

@@ -7,7 +7,7 @@
 package utils
 
 import (
-	"github.com/sssbook/go-util/util/gotime/command"
+	"github.com/rq-cc/go-util/util/gotime/command"
 )
 
 const (

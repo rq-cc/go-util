@@ -7,7 +7,7 @@
 package utils
 
 import (
-	"github.com/sssbook/go-util/util/gotime/empty"
+	"github.com/rq-cc/go-util/util/gotime/empty"
 	"reflect"
 )
 

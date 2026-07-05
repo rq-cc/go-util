@@ -7,7 +7,7 @@
 package utils_test
 
 import (
-	utils2 "github.com/sssbook/go-util/util/gotime/utils"
+	utils2 "github.com/rq-cc/go-util/util/gotime/utils"
 	"io/ioutil"
 	"testing"
 
@@ -68,6 +68,6 @@ func Test_ReadCloser(t *testing.T) {
 func Test_RemoveSymbols(t *testing.T) {
 	gtest.C(t, func(t *gtest.T) {
 		t.Assert(utils2.RemoveSymbols(`-a-b._a c1!@#$%^&*()_+:";'.,'01`), `abac101`)
-		t.Assert(utils2.RemoveSymbols(`-a-b我._a c1!@#$%^&*是()_+:帅";'.,哥'01`), `ab我ac1是帅哥01`)
+		t.Assert(utils2.RemoveSymbols(`-a-b�?_a c1!@#$%^&*�?)_+:�?;'.,�?01`), `ab我ac1是帅�?1`)
 	})
 }

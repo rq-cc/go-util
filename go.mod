@@ -1,4 +1,4 @@
-module github.com/sssbook/go-util
+module github.com/rq-cc/go-util
 
 go 1.23.0
 

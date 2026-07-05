@@ -11,7 +11,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/sssbook/go-util/util/gotime/utils"
+	"github.com/rq-cc/go-util/util/gotime/utils"
 	"path/filepath"
 	"time"
 

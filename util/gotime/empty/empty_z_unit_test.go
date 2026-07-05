@@ -7,7 +7,7 @@
 package empty_test
 
 import (
-	"github.com/sssbook/go-util/util/gotime/empty"
+	"github.com/rq-cc/go-util/util/gotime/empty"
 	"testing"
 
 	"github.com/gogf/gf/v2/frame/g"

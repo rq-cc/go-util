@@ -7,7 +7,7 @@
 package utils_test
 
 import (
-	"github.com/sssbook/go-util/util/gotime/utils"
+	"github.com/rq-cc/go-util/util/gotime/utils"
 	"regexp"
 	"testing"
 )

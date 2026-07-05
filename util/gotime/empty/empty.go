@@ -8,7 +8,7 @@
 package empty
 
 import (
-	"github.com/sssbook/go-util/util/gotime/reflection"
+	"github.com/rq-cc/go-util/util/gotime/reflection"
 	"reflect"
 	"time"
 )
